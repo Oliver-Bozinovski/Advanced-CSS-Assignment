@@ -1,0 +1,118 @@
+@mixin social-media-widget {
+    position: fixed;
+    grid-column-start: -1;
+    justify-self: end;
+    translate: 0 280px;
+    width: 35px;
+
+    &__list {
+
+        &__item {
+            position: relative;
+            height: 35px;
+
+            a {
+                position: block;
+                left: 265px;
+                color: $color-white;
+                display: block;
+                width: 100%;
+                height: 100%;
+                line-height: 35px;
+                text-decoration: underline;
+                padding-left: 15%;
+                transition: all 300ms linear;
+
+                i {
+                    position: absolute;
+                    top: 8px;
+                    left: 10px;
+                    font-size: 18px;
+                }
+
+                span {
+                    display: none;
+                }
+
+            }
+
+            a:hover {
+                z-index: 1;
+                width: 280px;
+                translate: -250px 0;
+
+
+                span {
+                    display: block;
+                    text-align: center;
+                }
+
+            }
+
+        }
+
+
+        &__item--blog {
+            a {
+                background-color: #e17b77;
+
+                i {
+                    left: 7px;
+                }
+            }
+
+        }
+
+        &__item--twitter {
+            a {
+                background-color: #00aced;
+            }
+
+        }
+
+        &__item--linkedin {
+            a {
+                background-color: #007bb6;
+            }
+        }
+
+        &__item--facebook {
+            a {
+                background-color: #3b5998;
+            }
+        }
+
+        &__item--github {
+            a {
+                background-color: #333;
+            }
+        }
+    }
+
+    // Social Media Widget Positioning
+
+    @media (max-height: 500px) {
+
+        translate: 0 100px;
+
+    }
+
+    @media (min-height: 800px) {
+
+        translate: 0 500px;
+
+    }
+
+    @media (min-height: 1000px) {
+
+        translate: 0 700px;
+
+    }
+
+    @media (min-height: 1200px) {
+
+        translate: 0 900px;
+
+    }
+
+}

@@ -1,0 +1,46 @@
+@import "./reset";
+@import "./constants";
+@import "./card-styles";
+@import "./card-hover-styles";
+@import "./social-media-widget";
+
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    justify-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
+    background-color: $color-gray;
+    font-family: Mukta, Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+
+}
+
+.card {
+    @include card-styles;
+}
+
+.card:hover {
+    @include card-hover;
+}
+
+.social-media {
+    @include social-media-widget;
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+}
